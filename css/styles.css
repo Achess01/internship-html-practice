@@ -1,11 +1,237 @@
 @import url(http://fonts.googleapis.com/css?family=Exo+2:400,200,600,800);
 
-:root{
-  /* bg-color */
-  --bg-color-blue-metal: rgb(7,66,81);
-  --bg-color-gray: rgb(51,51,51);
+:root {
+    /* bg-color */
+    --bg-color-blue-metal: rgb(7, 66, 81);
+    --bg-color-gray: rgb(51, 51, 51);
+    --bg-color-light-gray: rgb(192,192,192);    
+    --bg-color-aqua: rgb(122,243,213);
+    /* text */
+    --color-white: white;
+    /* color */
+    --color-warn: red;
+    --color-black: black;
 }
 
-body{
-  font-family: 'Exo 2', sans-serif;
+/* fit imgs */
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: "Exo 2", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.page-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    /* background: linear-gradient(red, orange, yellow, green, blue); */
+    background-color: var(--bg-color-blue-metal);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+header > ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 45%;
+}
+
+heade > ul > li {
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 100%;
+}
+
+header > ul > li a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+header > ul > li a:hover {
+    text-decoration: underline;
+}
+
+header > ul > li > ul {
+    list-style: none;
+    display: none;
+    position: absolute;
+    padding: 0.5em;
+    background-color: var(--bg-color-blue-metal);
+}
+
+header > ul > li:hover > ul {
+    display: block;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1em 0;
+}
+
+main > .carrousel {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Dinning in the Area */
+main > .dinning {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main > .dinning > .dinnig-item > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main > .dinning > .dinnig-info > h1 {
+    font-size: 1.7em;
+}
+
+/*  */
+
+/* main info */
+main.information-main {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+main.information-main > .info-left{
+    width: 100%;
+    padding: 1em;
+}
+
+#arrivalinfo > ul{
+    list-style: none;
+    padding: 0;    
+}
+
+#arrivalinfo > ul > li{
+    background-color: var(--bg-color-light-gray);
+    margin: .5em 0;
+    border: 1px solid black;
+    padding: .5em;
+}
+
+main.information-main > .right-info > #services > ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;        
+    font-size: .8em;
+}
+
+
+main.information-main > .right-info > #accessibility > ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;        
+    font-size: .8em;
+}
+
+main.information-main > .right-info {
+    width: 60%;
+}
+
+main.information-main > .right-info > #services > ul > li{
+    color: var(--color-warn);
+    border: 1px solid var(--color-warn);
+    /* border-radius: .5em; */
+    padding: .5em;
+    margin: .3em;
+}
+
+
+main.information-main > .right-info > #services > ul > li:hover{
+    background-color: var(--bg-color-aqua);
+}
+
+main.information-main > .right-info > #accessibility > ul > li{
+    color: var(--color-black);
+    border: 1px solid var(--color-black);
+    /* border-radius: .5em; */
+    padding: .5em;
+    margin: .3em;
+}
+
+
+main.information-main > .right-info > #accessibility > ul > li:hover{
+    background-color: var(--bg-color-aqua);
+}
+
+
+/*  */
+
+/* Rooms */
+
+main > .room-info > .room{
+    padding: 1em;
+}
+/* End Rooms */
+
+/* Contact */
+main.contact{
+    min-height: 76.5vh;
+}
+
+main.contact > form > button.btn-form{
+    height: 2.5em;
+    width: 5em;
+    border: 1px solid var(--color-black);
+    font-weight: 400;
+    color: var(--color-white);
+    background-color: var(--bg-color-blue-metal);
+    margin: .5em;
+}
+/* End contact */
+
+footer {
+    background-color: var(--bg-color-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer > ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+    width: 20%;
+    margin: 0.5em auto;
+    padding: 0;
+}
+
+footer > ul > li {
+    display: block;
+}
+
+footer > ul > li > a > img {
+    display: block;
+    border-radius: 50%;
+    width: 2em;
 }
