@@ -4,8 +4,8 @@
     /* bg-color */
     --bg-color-blue-metal: rgb(7, 66, 81);
     --bg-color-gray: rgb(51, 51, 51);
-    --bg-color-light-gray: rgb(192,192,192);    
-    --bg-color-aqua: rgb(122,243,213);
+    --bg-color-light-gray: rgb(192, 192, 192);
+    --bg-color-aqua: rgb(122, 243, 213);
     /* text */
     --color-white: white;
     /* color */
@@ -32,7 +32,20 @@ body {
 
 header {
     /* background: linear-gradient(red, orange, yellow, green, blue); */
-    background-color: var(--bg-color-blue-metal);
+    /* background-color: var(--bg-color-blue-metal); */
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        0deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(7, 66, 81, 1) 0%,
+        rgba(2, 19, 55, 1) 2%,
+        rgba(2, 51, 89, 1) 42%,
+        rgba(1, 77, 115, 1) 77%,
+        rgba(1, 93, 131, 1) 83%,
+        rgba(1, 104, 143, 1) 89%,
+        rgba(1, 147, 187, 1) 96%,
+        rgba(0, 212, 255, 1) 100%
+    );
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -43,12 +56,63 @@ header {
 header > ul {
     display: flex;
     list-style: none;
-    align-items: center;
-    justify-content: space-between;
-    width: 45%;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    width: 55%;
+    margin: 0;
+    margin-top: 1em;
 }
 
-heade > ul > li {
+/* header > ul > li > a:after {
+    content: "";
+}
+ */
+header > ul > li:nth-child(1) > a:after {
+    content: "";
+    background: url("../assets/icons/info.png");
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+
+header > ul > li:nth-child(2) > a:after {
+    content: "";
+    background: url("../assets/icons/attractions.png");
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+
+header > ul > li:nth-child(3) > a:after {
+    content: "";
+    background: url("../assets/icons/rooms.png");
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+
+header > ul > li:nth-child(4) > a:after {
+    content: "";
+    background: url("../assets/icons/dining.png");
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+
+header > ul > li:nth-child(5) > a:after {
+    content: "";
+    background: url("../assets/icons/events.png");
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+
+header > ul > li {
     position: relative;
     float: left;
     height: 100%;
@@ -119,93 +183,89 @@ main.information-main {
     justify-content: space-between;
 }
 
-main.information-main > .info-left{
+main.information-main > .info-left {
     width: 100%;
     padding: 1em;
 }
 
-#arrivalinfo > ul{
+#arrivalinfo > ul {
     list-style: none;
-    padding: 0;    
+    padding: 0;
 }
 
-#arrivalinfo > ul > li{
+#arrivalinfo > ul > li {
     background-color: var(--bg-color-light-gray);
-    margin: .5em 0;
+    margin: 0.5em 0;
     border: 1px solid black;
-    padding: .5em;
+    padding: 0.5em;
 }
 
-main.information-main > .right-info > #services > ul{
+main.information-main > .right-info > #services > ul {
     list-style: none;
     padding: 0;
     display: flex;
-    flex-wrap: wrap;        
-    font-size: .8em;
+    flex-wrap: wrap;
+    font-size: 0.8em;
 }
 
-
-main.information-main > .right-info > #accessibility > ul{
+main.information-main > .right-info > #accessibility > ul {
     list-style: none;
     padding: 0;
     display: flex;
-    flex-wrap: wrap;        
-    font-size: .8em;
+    flex-wrap: wrap;
+    font-size: 0.8em;
 }
 
 main.information-main > .right-info {
     width: 60%;
 }
 
-main.information-main > .right-info > #services > ul > li{
+main.information-main > .right-info > #services > ul > li {
     color: var(--color-warn);
     border: 1px solid var(--color-warn);
     /* border-radius: .5em; */
-    padding: .5em;
-    margin: .3em;
+    padding: 0.5em;
+    margin: 0.3em;
 }
 
-
-main.information-main > .right-info > #services > ul > li:hover{
+main.information-main > .right-info > #services > ul > li:hover {
     background-color: var(--bg-color-aqua);
 }
 
-main.information-main > .right-info > #accessibility > ul > li{
+main.information-main > .right-info > #accessibility > ul > li {
     color: var(--color-black);
     border: 1px solid var(--color-black);
     /* border-radius: .5em; */
-    padding: .5em;
-    margin: .3em;
+    padding: 0.5em;
+    margin: 0.3em;
 }
 
-
-main.information-main > .right-info > #accessibility > ul > li:hover{
+main.information-main > .right-info > #accessibility > ul > li:hover {
     background-color: var(--bg-color-aqua);
 }
-
 
 /*  */
 
 /* Rooms */
 
-main > .room-info > .room{
+main > .room-info > .room {
     padding: 1em;
 }
 /* End Rooms */
 
 /* Contact */
-main.contact{
+main.contact {
     min-height: 76.5vh;
 }
 
-main.contact > form > button.btn-form{
+main.contact > form > button.btn-form {
     height: 2.5em;
     width: 5em;
     border: 1px solid var(--color-black);
     font-weight: 400;
     color: var(--color-white);
     background-color: var(--bg-color-blue-metal);
-    margin: .5em;
+    margin: 0.5em;
 }
 /* End contact */
 
